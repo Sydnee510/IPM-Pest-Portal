@@ -1,24 +1,37 @@
-# README
+# One Stop Shop IPM Pest Portal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is job assignment protal for the field agents at IPM to schedule and view their upcoming appoinments. 
 
-Things you may want to cover:
+## Demo
 
-* Ruby version
 
-* System dependencies
+## Installation
 
-* Configuration
+Clone this repo:
 
-* Database creation
+https://github.com/Sydnee510/IPM-Pest-Portal
 
-* Database initialization
+Direct:
 
-* How to run the test suite
+    $ cd portal-backend
 
-* Services (job queues, cache servers, search engines, etc.)
+Install Dependicies:
 
-* Deployment instructions
+    $ bundle install
 
-* ...
+Create Database:
+
+    $ rails db:create 
+
+Migrate Database:
+
+    $ rails db:migrate
+
+Start Server:
+
+    $ rails s
+
+ ## Framework
+
+ Ruby on Rails
+
