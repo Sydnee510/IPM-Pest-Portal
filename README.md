@@ -1,9 +1,8 @@
 # One Stop Shop IPM Pest Portal
 
-This is job assignment protal for the field agents at IPM to schedule and view their upcoming appoinments. 
+This is a job assignment protal for the field agents at IPM to schedule and view their upcoming appoinments. 
 
 ## Demo
-
 
 ## Installation
 
