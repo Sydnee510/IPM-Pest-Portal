@@ -1,0 +1,25 @@
+<% if @location.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+  <ul>
+  <% @location.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li> <br>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+<%= form_for [@location] do |f| %>
+    
+    <%= f.label :new_name %>
+    <%= f.text_area :name %> <br>
+    <%= f.label :new_city %>
+    <%= f.text_area :city %> <br>
+    <%=f.submit %>
+    
+  <% end %>
+  <style>
+        li {
+          color: red;
+          font-weight: bold;
+        }
+</style>
