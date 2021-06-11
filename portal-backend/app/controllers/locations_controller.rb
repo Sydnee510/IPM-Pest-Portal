@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
-    # before_action :authenticate_user!
-   # before_action :set_myth
+    #  before_action :authenticate_user!
+
    def index
     @locations = Location.all 
 end
@@ -36,11 +36,8 @@ end
     end
 
     private 
-    def set_location
-        @location = Location.find(params[:location_id])
-    end 
 
     def location_params
-        params.require(:location).permit(:name, :city)
+        params.require(:location).permit(:name, :city, work_orders_attributes: [:name], users_attributes: [:name])
     end 
 end

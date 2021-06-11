@@ -1,0 +1,12 @@
+<h4>Location: <%= @work_order.location_id %> <br>
+
+    <h4>Technician: <%= @work_order.user_id %> <br>
+Time: <%= @work_order.time %> <br>
+Duration: <%= @work_order.duration %> <br>
+Price : $ <%= @work_order.price %> <br>
+<%= link_to "Delete", work_order_path(@work_order), method: :delete, class: "destroy", data: {confirm: "Are you sure?"} %>
+<%= link_to "Edit", edit_work_order_path(@work_order) %></h4>
+
+<a href ="/">back</a>
+
+

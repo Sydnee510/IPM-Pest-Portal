@@ -1,4 +1,22 @@
-<%= @location.name %>
-<%= @location.city %>
+<br>
+<br>
+Location: <%= @location.name %> <br>
+City: <%= @location.city %>
+<br>
+<br>
+WorkOrders:
+<br>
 
+<%= @location.work_orders.each do |work_order| %>
+<li>Time: <%= work_order.time %> <br></li>
+<li>Duration: <%= work_order.duration %> <br></li>
+<li>Price : $ <%= work_order.price %> <br></li>
+<%= link_to "Delete", [@location, work_order], method: :delete, class: "destroy", data: {confirm: "Are you sure?"} %>
+<%= link_to "Edit", [@location, work_order] %></h4>
+<%end%>
+
+<br>
+
+<a href="/locations/<%= @location.id %>/work_orders/new">Add a new work order</a>
+<br>
 <a href ="/">back</a>

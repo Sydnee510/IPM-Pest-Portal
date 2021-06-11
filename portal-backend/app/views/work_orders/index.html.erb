@@ -1,0 +1,14 @@
+<% @work_orders.each do |work_order| %>
+    <h3><%= link_to work_order.time, work_order %>
+    <h3>UserID:<%= work_order.user %>
+    <h3>LocationID:<%= work_order.location %>
+    <h3>Time:<%= work_order.duration%>
+    <h3>Price:<%= work_order.price%>
+
+    
+    
+    <%= link_to "Edit", edit_work_order_path(work_order) %>
+    <%= link_to "Delete", work_order_path(work_order), method: :delete, class: "destroy", data: {confirm: "Are you sure?"} %></h3>
+    
+    
+<%end%>
