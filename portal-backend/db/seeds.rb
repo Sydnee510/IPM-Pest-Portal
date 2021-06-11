@@ -8,4 +8,13 @@
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'locations.csv'))
-puts csv_text
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+    t = Location.new
+    t.name = row['name']
+    t.city = row['city']
+    puts "#{t.name}, #{t.city} saved"
+    t.save
+  end
+
+  puts "There are now #{Location.count} rows in the locations table"
